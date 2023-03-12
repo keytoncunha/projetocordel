@@ -1,0 +1,130 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+:root{
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: 'Passion One', cursiva;
+    --fonte3: 'Sriracha', cursiva;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(169, 169, 169, 0.646);
+    font-family: var(--fonte1);
+    font-size: 1em;
+}
+
+header{
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+header > h1{
+    font-family: var(--fonte2);
+    font-size: 3em;
+    font-variant: small-caps;
+    padding-top: 50px;
+}
+header > p{
+    padding-bottom: 50px;
+}
+header a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: bolder;
+}
+header a:hover, footer a:hover{
+    text-decoration: underline;
+}
+
+main {
+    width: 100%;
+    max-width: 450px;
+    margin: auto;
+}
+
+section{
+    font-family: var(--fonte3);
+    font-size: 1.2em;
+    padding: 30px;
+    padding-left: 30px;
+    line-height: 2em;
+}
+section > p{
+    padding-bottom: 2em;
+}
+section.normal{
+    background-color: #fff;
+    color: #000;
+}
+section.imagem{
+    background-color: rgb(51, 51, 51);
+    color: #fff;
+    background-size: cover;
+    background-attachment: fixed;
+
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.476);
+}
+section.imagem > p{
+    display: inline-block;
+    padding: 5px;
+    background-color: rgba(169, 169, 169, 0.514);
+    text-shadow: 1px 1px 0px #000;
+}
+section#img01{
+    background-image: url(../imagens/background001.jpg);
+    background-position: right center;
+}
+section#img02{
+    background-image: url(../imagens/background002.jpg);
+}
+
+footer{
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 15px 10px;
+}
+footer  p a {
+    color: #fff;
+    font-size: 1.3em;
+    text-decoration: none;
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    body {
+        background-color: #ffcd59a4;
+        font-size: 1.4em;
+    }
+    main {
+        width: 90%;
+        max-width: 650px;
+    }
+    section.imagem > p {
+        background-color: #ffcd594f;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    body {
+        background-color: #a43c379d;
+        font-size: 1.6em;
+    }
+    main {
+        width: 90%;
+        max-width: 800px;
+    }
+    section.imagem > p {
+        background-color: #a43c3759;
+    }
+}
